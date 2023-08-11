@@ -5,18 +5,15 @@ import {
 } from '@chakra-ui/react'
 
 import { Card } from './components/Card/Card';
-import { Header } from './components/Header/Header';
-import { Footer } from './components/Footer/Footer';
+import { Layout } from './components/Layout';
 
 function App() {
 
   return (
     <ChakraProvider>
-      <Box minH='100vh' display='flex' flexDirection='column' justifyContent='space-between'>
-          <Header />
-          <Card  />
-          <Footer />
-      </Box>
+      <Layout>
+        <Card />
+      </Layout>
     </ChakraProvider>
   );
 }
