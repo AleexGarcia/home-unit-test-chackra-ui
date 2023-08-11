@@ -6,7 +6,8 @@ describe('login', () => {
     window.alert = mockAlert
 
     it('Deve exibir um alert com boas vindas', () => {
-        login()
-        expect(mockAlert).toHaveBeenCalledWith('Bem vinda!')
+        const userName = 'Alexandre';
+        login(userName);
+        expect(mockAlert).toHaveBeenCalledWith(`${userName}, seja Bem vindo(a)!`);
     })
 })
